@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row mt-5">
+        <div *ngFor="let i of info" class="col-4">
+            <mat-card class="example-card">
+                <mat-card-header>
+                <div mat-card-avatar [style]="i.avatar"></div>
+                <mat-card-title>{{i.nombre}}</mat-card-title>
+                <mat-card-subtitle>{{i.tipo}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image [src]="i.imagen" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                <p>
+                    {{i.caracteristicas}}
+                </p>
+                </mat-card-content>
+                <mat-card-actions>
+                <button *ngIf="!megusta" mat-button (click)="darlike()">Me gusta</button>
+                <button *ngIf="megusta" mat-button> <mat-icon color="accent">favorite</mat-icon></button>
+                <button mat-button (click)="openDialog()">SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
