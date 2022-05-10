@@ -3,16 +3,21 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material.module';
 import { CardComponent } from './card/card.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DialogoComponent } from './card/dialogo/dialogo.component';
+import { SlideComponent } from './slide/slide.component';
 
 
 @NgModule({
   declarations: [
     CardComponent,
-    NavbarComponent
+    NavbarComponent,
+    DialogoComponent,
+    SlideComponent
   ],
   exports: [
     CardComponent,
-    NavbarComponent
+    NavbarComponent,
+    SlideComponent
   ],
   imports: [
     CommonModule,
