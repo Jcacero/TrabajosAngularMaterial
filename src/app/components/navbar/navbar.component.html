@@ -1,7 +1,11 @@
 <mat-toolbar color="accent">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
+  <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Home</button>
+    <button mat-menu-item>Catalogo de animalitos</button>
+    <button mat-menu-item>Informacion de animalitos</button>
+    <button mat-menu-item>Zoológico de animalitos</button>
+  </mat-menu>
     <span>Animalitos UwU</span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
